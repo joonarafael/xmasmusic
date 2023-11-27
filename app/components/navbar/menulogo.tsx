@@ -2,24 +2,24 @@
 
 import Image from "next/image";
 
-interface AvatarProps {
+interface MenuLogoProps {
 	size?: number | null;
 }
 
-const Avatar: React.FC<AvatarProps> = ({ size }) => {
+const MenuLogo: React.FC<MenuLogoProps> = ({ size }) => {
 	if (!size) {
 		size = 30;
 	}
 
 	return (
 		<Image
-			alt="Avatar"
+			alt="MenuLogo"
 			className="rounded-full"
 			height={size}
-			src={"/images/nouser.png"}
+			src={"/images/xmas.png"}
 			width={size}
 		/>
 	);
 };
 
-export default Avatar;
+export default MenuLogo;
