@@ -1,3 +1,6 @@
+import { useRouter } from "next/navigation";
+
+import Button from "@/app/components/button";
 import ClientOnly from "@/app/components/clientonly";
 import EmptyState from "@/app/components/emptystate";
 
@@ -10,21 +13,24 @@ interface IParams {
 const YearPage = async ({ params }: { params: IParams }) => {
 	const { year } = params;
 
-	if (!year) {
+	const acceptable = ["2019", "2020", "2021", "2022", "2023"];
+
+	if (!year || !acceptable.includes(year)) {
 		return (
 			<ClientOnly>
 				<EmptyState
-					subtitle="Invalid URL provided, this year does not exist."
+					subtitle={`Year '${year}' not recognized! Check the URL.`}
 					title="404"
+					showReset
 				/>
 			</ClientOnly>
 		);
 	}
 
 	return (
-		<div>
+		<ClientOnly>
 			<YearClient year={year} />
-		</div>
+		</ClientOnly>
 	);
 };
 

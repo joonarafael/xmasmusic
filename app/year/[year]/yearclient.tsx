@@ -1,8 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-
-import Audio from "@/app/components/audioplayer";
+import AudioPlayer from "@/app/components/audioplayer/audioplayer";
 import Container from "@/app/components/container";
 import useYears from "@/app/hooks/useYears";
 
@@ -11,20 +9,6 @@ interface YearClientProps {
 }
 
 const YearClient: React.FC<YearClientProps> = ({ year }) => {
-	const [width, setWidth] = useState(window.innerWidth);
-
-	const breakpoint = 960;
-	const breakpointHeading = 1040;
-
-	useEffect(() => {
-		const handleResizeWindow = () => setWidth(window.innerWidth);
-		window.addEventListener("resize", handleResizeWindow);
-
-		return () => {
-			window.removeEventListener("resize", handleResizeWindow);
-		};
-	}, []);
-
 	const { getAll } = useYears();
 	const fullList = getAll();
 
@@ -44,7 +28,7 @@ const YearClient: React.FC<YearClientProps> = ({ year }) => {
 					<span className="text-4xl text-bold">
 						{thisYear.title.toUpperCase()}
 					</span>
-					<Audio />
+					<AudioPlayer />
 				</div>
 			</div>
 		</Container>
