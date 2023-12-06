@@ -8,6 +8,7 @@ body,
 	height: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background: #fcfcfc;
 }
 
 input[type="number"]::-webkit-inner-spin-button {
