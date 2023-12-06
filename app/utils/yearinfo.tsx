@@ -4,22 +4,22 @@ export const years = [
 	{
 		value: 2019,
 		title: "Oravan joulu",
-		url: "https://drive.google.com/file/d/1SP3wSDhH8PrcUJLIEfPcNrxs4fujoIBE/view",
+		url: "https://dl.dropboxusercontent.com/scl/fi/zyrwcy5ed23i39hy6i7zy/2019_loudness_adjusted.mp3?rlkey=st51oshrsiwxz7fzwdw8c7r30",
 	},
 	{
 		value: 2020,
 		title: "Kuului laulu enkelten",
-		url: "https://drive.google.com/file/d/10NpW5jMHSMaZAAJQziSJ4dKk2B2R3GM_/view",
+		url: "https://dl.dropboxusercontent.com/scl/fi/omtiqsnhlryyr8tjhitlb/2020_loudness_adjusted.mp3?rlkey=6471pena00vthdpcd3p1ac9bf",
 	},
 	{
 		value: 2021,
 		title: "Happy Xmas (War Is Over)",
-		url: "https://drive.google.com/file/d/1gWNSRQ-pI6G45ketxKeuTB08GNEqmmts/view",
+		url: "https://dl.dropboxusercontent.com/scl/fi/radgvfbajyj8xx6w3tzso/2021_loudness_adjusted.mp3?rlkey=at0325yiymrxcmsuz5p3l0dib",
 	},
 	{
 		value: 2022,
 		title: "Pieni rumpali",
-		url: "https://drive.google.com/file/d/138tnxY7TuapRVJF0ZH1Ns8QvQVMaEmxg/view",
+		url: "https://dl.dropboxusercontent.com/scl/fi/huq5fs8y0vustwnff1ubi/2022_loudness_adjusted.mp3?rlkey=0wb18g6mcpu43ahlb6yprhju0",
 	},
 	{
 		value: 2023,

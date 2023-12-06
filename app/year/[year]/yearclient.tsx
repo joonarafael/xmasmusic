@@ -28,7 +28,7 @@ const YearClient: React.FC<YearClientProps> = ({ year }) => {
 					<span className="text-4xl text-bold">
 						{thisYear.title.toUpperCase()}
 					</span>
-					<AudioPlayer />
+					<AudioPlayer year={thisYear} />
 				</div>
 			</div>
 		</Container>

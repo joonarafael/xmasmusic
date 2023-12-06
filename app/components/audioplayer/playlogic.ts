@@ -1,9 +1,13 @@
 "use client";
 
-export function createAudioPlayer(year: string) {
+interface YearClientProps {
+	url: string;
+}
+
+export function CreateAudioPlayer(url: string) {
 	const audioElement: HTMLAudioElement = new Audio();
-	audioElement.src =
-		"https://dl.dropboxusercontent.com/scl/fi/huq5fs8y0vustwnff1ubi/2022_loudness_adjusted.mp3?rlkey=0wb18g6mcpu43ahlb6yprhju0";
+
+	audioElement.src = url;
 	audioElement.load();
 
 	function togglePlayPause() {
@@ -14,5 +18,22 @@ export function createAudioPlayer(year: string) {
 		}
 	}
 
-	return togglePlayPause;
+	function getCurrentTime() {
+		return audioElement.currentTime;
+	}
+
+	function getTotalDuration() {
+		return audioElement.duration;
+	}
+
+	function addTimeUpdateListener(callback: () => void) {
+		audioElement.addEventListener("timeupdate", callback);
+	}
+
+	return {
+		togglePlayPause,
+		getCurrentTime,
+		getTotalDuration,
+		addTimeUpdateListener,
+	};
 }

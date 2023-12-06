@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import { Nunito } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 
 import ClientOnly from "./components/clientonly";
 import Footer from "./components/footer";
@@ -11,7 +11,8 @@ export const metadata = {
 	description: "Christmas Music Catalogue",
 };
 
-const font = Nunito({
+const font = DM_Sans({
+	weight: "400",
 	subsets: ["latin"],
 });
 
