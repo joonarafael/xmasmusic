@@ -1,12 +1,16 @@
 "use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
-import Controls from './controls';
-import { CreateAudioPlayer } from './playlogic';
-import ProgressBar from './progressbar';
+import Controls from "./controls";
+import { CreateAudioPlayer } from "./playlogic";
+import ProgressBar from "./progressbar";
 
-const AudioPlayer = ({ year }) => {
+interface AudioPlayerProps {
+	year: any;
+}
+
+const AudioPlayer: React.FC<AudioPlayerProps> = ({ year }) => {
 	const [ticking, setTicking] = useState(true);
 	const [currentTime, setCurrentTime] = useState(0);
 	const [totalDuration, setTotalDuration] = useState(0);
