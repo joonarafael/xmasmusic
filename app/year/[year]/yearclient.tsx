@@ -1,20 +1,20 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import AudioPlayer from '@/app/components/audioplayer/audioplayer';
-import Container from '@/app/components/container';
-import Credits19 from '@/app/components/credits/credits19';
-import Credits20 from '@/app/components/credits/credits20';
-import Credits21 from '@/app/components/credits/credits21';
-import Credits22 from '@/app/components/credits/credits22';
-import Credits23 from '@/app/components/credits/credits23';
-import Lyrics19 from '@/app/components/lyrics/lyrics19';
-import Lyrics20 from '@/app/components/lyrics/lyrics20';
-import Lyrics21 from '@/app/components/lyrics/lyrics21';
-import Lyrics22 from '@/app/components/lyrics/lyrics22';
-import Lyrics23 from '@/app/components/lyrics/lyrics23';
-import useYears from '@/app/hooks/useYears';
+import AudioPlayer from "@/app/components/audioplayer/audioplayer";
+import Container from "@/app/components/container";
+import Credits19 from "@/app/components/credits/credits19";
+import Credits20 from "@/app/components/credits/credits20";
+import Credits21 from "@/app/components/credits/credits21";
+import Credits22 from "@/app/components/credits/credits22";
+import Credits23 from "@/app/components/credits/credits23";
+import Lyrics19 from "@/app/components/lyrics/lyrics19";
+import Lyrics20 from "@/app/components/lyrics/lyrics20";
+import Lyrics21 from "@/app/components/lyrics/lyrics21";
+import Lyrics22 from "@/app/components/lyrics/lyrics22";
+import Lyrics23 from "@/app/components/lyrics/lyrics23";
+import useYears from "@/app/hooks/useYears";
 
 interface YearClientProps {
 	year: string;
@@ -80,7 +80,7 @@ const YearClient: React.FC<YearClientProps> = ({ year }) => {
 					<span className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-green-600 via-red-500 to-orange-400 inline-block text-transparent bg-clip-text">
 						{thisYear.title.toUpperCase()}
 					</span>
-					<AudioPlayer year={thisYear} />
+					{thisYear.value !== 2023 && <AudioPlayer year={thisYear} />}
 					<hr className="mt-4" />
 					{width > breakpoint ? (
 						<div className="flex flex-row gap-4 mt-4">
