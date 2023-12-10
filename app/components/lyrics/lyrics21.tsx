@@ -40,7 +40,7 @@ const Lyrics21 = () => {
 				<br />
 				for weak and for strong
 				<br />
-				The rich and the poor ones,
+				For the rich and the poor ones,
 				<br />
 				the road is so long
 				<br />

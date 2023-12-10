@@ -47,7 +47,11 @@ const Footer = () => {
 			</div>
 			<div className="flex flex-row items-center align-center gap-2">
 				<AiOutlineCopyright size={16} />
-				<span className="text-neutral-500">{`2023 - ${today.getFullYear()} Joona Rafael Kettunen`}</span>
+				{today.getFullYear() === 2023 ? (
+					<span className="text-neutral-500">{`2023 Joona Kettunen`}</span>
+				) : (
+					<span className="text-neutral-500">{`2023 - ${today.getFullYear()} Joona Kettunen`}</span>
+				)}
 			</div>
 		</div>
 	);
