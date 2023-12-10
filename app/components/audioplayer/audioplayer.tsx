@@ -11,11 +11,26 @@ interface AudioPlayerProps {
 }
 
 const AudioPlayer: React.FC<AudioPlayerProps> = ({ year }) => {
-	const [ticking, setTicking] = useState(true);
 	const [currentTime, setCurrentTime] = useState(0);
 	const [totalDuration, setTotalDuration] = useState(0);
 
 	const audioElement = useRef(CreateAudioPlayer(year.songUrl));
+
+	const handleFastForward = () => {
+		const newTime = currentTime + 30;
+		audioElement.current.seekTo(
+			newTime > totalDuration ? totalDuration : newTime
+		);
+	};
+
+	const handleRewind = () => {
+		const newTime = currentTime - 30;
+		audioElement.current.seekTo(newTime < 0 ? 0 : newTime);
+	};
+
+	const handleSeek = (time: number) => {
+		audioElement.current.seekTo(time);
+	};
 
 	useEffect(() => {
 		const updateProgress = () => {
@@ -32,8 +47,16 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ year }) => {
 
 	return (
 		<div className="flex flex-col justify-center">
-			<ProgressBar currentTime={currentTime} totalDuration={totalDuration} />
-			<Controls onPlayPauseClick={audioElement.current.togglePlayPause} />
+			<ProgressBar
+				currentTime={currentTime}
+				totalDuration={totalDuration}
+				onSeek={handleSeek}
+			/>
+			<Controls
+				audioElement={audioElement.current}
+				onFastForward={handleFastForward}
+				onRewind={handleRewind}
+			/>
 		</div>
 	);
 };

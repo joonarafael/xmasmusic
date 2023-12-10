@@ -6,11 +6,7 @@ Full Web Application for the Xmas Music
 
 - Customize Progressbar
 
-- Add 30 back 30 forward
-
 - Volume
-
-- Check playstatus for pause/play button
 
 - Home Page
 

@@ -30,10 +30,20 @@ export function CreateAudioPlayer(url: string) {
 		audioElement.addEventListener("timeupdate", callback);
 	}
 
+	function isPlaying() {
+		return !audioElement.paused;
+	}
+
+	function seekTo(time: number) {
+		audioElement.currentTime = time;
+	}
+
 	return {
 		togglePlayPause,
 		getCurrentTime,
 		getTotalDuration,
 		addTimeUpdateListener,
+		seekTo,
+		isPlaying,
 	};
 }

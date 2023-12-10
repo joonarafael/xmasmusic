@@ -1,24 +1,51 @@
 "use client";
 
-import { useState } from 'react';
-import { FaBackward, FaForward, FaPause, FaPlay } from 'react-icons/fa';
+import { useEffect, useState } from "react";
+import { FaBackward, FaForward, FaPause, FaPlay } from "react-icons/fa";
+
+import { CreateAudioPlayer } from "./playlogic";
 
 type ControlsProps = {
-	onPlayPauseClick: () => void;
+	audioElement: ReturnType<typeof CreateAudioPlayer>;
+	onFastForward: () => void;
+	onRewind: () => void;
 };
 
-const Controls: React.FC<ControlsProps> = ({ onPlayPauseClick }) => {
+const Controls: React.FC<ControlsProps> = ({
+	audioElement,
+	onFastForward,
+	onRewind,
+}) => {
 	const [isPlaying, setIsPlaying] = useState(false);
 
 	const playClick = () => {
-		onPlayPauseClick();
-		setIsPlaying(!isPlaying);
+		audioElement.togglePlayPause();
+		setIsPlaying(audioElement.isPlaying());
 	};
 
+	const fastForwardClick = () => {
+		onFastForward();
+	};
+
+	const rewindClick = () => {
+		onRewind();
+	};
+
+	useEffect(() => {
+		const updateProgress = () => {
+			setIsPlaying(audioElement.isPlaying());
+		};
+
+		const intervalId = setInterval(updateProgress, 1000);
+
+		return () => clearInterval(intervalId);
+	}, [audioElement]);
+
 	return (
-		<div className="flex flex-row gap-4 mt-4 p-4 justify-center">
-			<button>
-				<FaBackward size={22} color="#3D0C11" />
+		<div className="flex flex-row gap-6 mt-4 p-4 justify-center items-center">
+			<button className="flex flex-row gap-2 items-center">
+				30
+				<FaBackward onClick={rewindClick} size={22} color="#3D0C11" />
 			</button>
 			<button onClick={playClick}>
 				{isPlaying ? (
@@ -27,8 +54,9 @@ const Controls: React.FC<ControlsProps> = ({ onPlayPauseClick }) => {
 					<FaPlay size={28} color="#3D0C11" />
 				)}
 			</button>
-			<button>
-				<FaForward size={22} color="#3D0C11" />
+			<button className="flex flex-row gap-2 items-center">
+				<FaForward onClick={fastForwardClick} size={22} color="#3D0C11" />
+				30
 			</button>
 		</div>
 	);
