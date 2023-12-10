@@ -23,7 +23,14 @@ const Footer = () => {
                 xl:px-20
             "
 		>
-			<div>XMAS MUSIC</div>
+			<div
+				className="hover:underline cursor-pointer"
+				onClick={() => {
+					window.location.href = "/";
+				}}
+			>
+				XMAS MUSIC
+			</div>
 			<div
 				onClick={() =>
 					window.open(

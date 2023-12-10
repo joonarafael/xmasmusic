@@ -8,6 +8,4 @@ Full Web Application for the Xmas Music
 
 - Volume
 
-- Home Page
-
 - Finally add Tonttu
