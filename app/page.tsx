@@ -1,5 +1,6 @@
 import ClientOnly from "./components/clientonly";
 import Container from "./components/container";
+import ErrorNote from "./components/errornote";
 import HomePageLink from "./components/homepagelink";
 
 const Home = async () => {

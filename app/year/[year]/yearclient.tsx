@@ -9,6 +9,7 @@ import Credits20 from "@/app/components/credits/credits20";
 import Credits21 from "@/app/components/credits/credits21";
 import Credits22 from "@/app/components/credits/credits22";
 import Credits23 from "@/app/components/credits/credits23";
+import ErrorNote from "@/app/components/errornote";
 import Lyrics19 from "@/app/components/lyrics/lyrics19";
 import Lyrics20 from "@/app/components/lyrics/lyrics20";
 import Lyrics21 from "@/app/components/lyrics/lyrics21";
@@ -74,6 +75,9 @@ const YearClient: React.FC<YearClientProps> = ({ year }) => {
 
 	return (
 		<Container>
+			<div className="mb-6">
+				<ErrorNote />
+			</div>
 			<div className="max-w-screen-lg mx-auto">
 				<div className="justify-center text-center flex flex-col gap-4">
 					<span className="text-xl">{year}</span>
