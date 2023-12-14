@@ -29,7 +29,8 @@ const ErrorNote = () => {
                             flex-row
                             items-center
                             justify-between
-                            md:gap-0
+                            gap-4
+							p-2
                         "
 						>
 							<div>
@@ -37,9 +38,9 @@ const ErrorNote = () => {
 									Äänenvoimakkuuden säätimessä esiintyy tällä hetkellä ongelmia.
 								</span>
 								<br />
-								<em>
-									Chrome & Edge selaimet näyttävät kyllä ominaisuutta tukevan,
-									mutta esim. Safari temppuilee vastaan.
+								<em className="text-neutral-500">
+									Chrome & Edge -selaimet näyttävät ominaisuutta tukevan, mutta
+									esim. Safari iOS-alustalla temppuilee vastaan.
 								</em>
 							</div>
 							<button onClick={() => hideNote()}>
