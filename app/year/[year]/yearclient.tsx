@@ -75,9 +75,11 @@ const YearClient: React.FC<YearClientProps> = ({ year }) => {
 
 	return (
 		<Container>
+			{/*
 			<div className="mb-6">
 				<ErrorNote />
 			</div>
+			*/}
 			<div className="max-w-screen-lg mx-auto">
 				<div className="justify-center text-center flex flex-col gap-4">
 					<span className="text-xl">{year}</span>

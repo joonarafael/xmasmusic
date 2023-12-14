@@ -35,7 +35,7 @@ const ErrorNote = () => {
 						>
 							<div>
 								<span className="text-lg">
-									Äänenvoimakkuuden säätimessä esiintyy tällä hetkellä ongelmia.
+									Kappaleen pikakelauksessa esiintyy tällä hetkellä ongelmia.
 								</span>
 								<br />
 								<em className="text-neutral-500">

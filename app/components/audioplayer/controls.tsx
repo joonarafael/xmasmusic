@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { BrowserView, MobileView } from "react-device-detect";
 import {
 	CiSquareMinus,
 	CiSquarePlus,
@@ -83,30 +84,32 @@ const Controls: React.FC<ControlsProps> = ({
 					30
 				</button>
 			</div>
-			<div className="flex flex-row gap-4 p-4 justify-center items-center">
-				{volume < 1 ? (
-					<CiSquareMinus size={28} color="#e6e6e6" />
-				) : (
-					<button onClick={volumeDownClick}>
-						<CiSquareMinus size={28} color="#0d0d0d" />
-					</button>
-				)}
-				<div className="flex flex-row gap-2 justify-center items-center w-[7vh]">
+			<BrowserView>
+				<div className="flex flex-row gap-4 p-4 justify-center items-center">
 					{volume < 1 ? (
-						<CiVolumeMute size={28} color="#0d0d0d" />
+						<CiSquareMinus size={28} color="#e6e6e6" />
 					) : (
-						<CiVolumeHigh size={28} color="#0d0d0d" />
+						<button onClick={volumeDownClick}>
+							<CiSquareMinus size={28} color="#0d0d0d" />
+						</button>
 					)}
-					<span>{`${volume} %`}</span>
+					<div className="flex flex-row gap-2 justify-center items-center w-[7vh]">
+						{volume < 1 ? (
+							<CiVolumeMute size={28} color="#0d0d0d" />
+						) : (
+							<CiVolumeHigh size={28} color="#0d0d0d" />
+						)}
+						<span>{`${volume} %`}</span>
+					</div>
+					{volume > 99 ? (
+						<CiSquarePlus size={28} color="#e6e6e6" />
+					) : (
+						<button onClick={volumeUpClick}>
+							<CiSquarePlus size={28} color="#0d0d0d" />
+						</button>
+					)}
 				</div>
-				{volume > 99 ? (
-					<CiSquarePlus size={28} color="#e6e6e6" />
-				) : (
-					<button onClick={volumeUpClick}>
-						<CiSquarePlus size={28} color="#0d0d0d" />
-					</button>
-				)}
-			</div>
+			</BrowserView>
 		</div>
 	);
 };
