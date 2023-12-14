@@ -32,6 +32,18 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ year }) => {
 		audioElement.current.seekTo(time);
 	};
 
+	const handleVolumeUp = () => {
+		audioElement.current.increaseVolume();
+	};
+
+	const handleVolumeDown = () => {
+		audioElement.current.decreaseVolume();
+	};
+
+	const volumeChange = () => {
+		return audioElement.current.getVolume();
+	};
+
 	useEffect(() => {
 		const updateProgress = () => {
 			setCurrentTime((prevTime) => audioElement.current.getCurrentTime());
@@ -56,6 +68,9 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ year }) => {
 				audioElement={audioElement.current}
 				onFastForward={handleFastForward}
 				onRewind={handleRewind}
+				onVolumeUp={handleVolumeUp}
+				onVolumeChange={volumeChange}
+				onVolumeDown={handleVolumeDown}
 			/>
 		</div>
 	);

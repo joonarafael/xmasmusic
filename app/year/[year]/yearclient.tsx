@@ -77,7 +77,7 @@ const YearClient: React.FC<YearClientProps> = ({ year }) => {
 			<div className="max-w-screen-lg mx-auto">
 				<div className="justify-center text-center flex flex-col gap-4">
 					<span className="text-xl">{year}</span>
-					<span className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-green-600 via-red-500 to-orange-400 inline-block text-transparent bg-clip-text">
+					<span className="text-4xl font-extrabold mb-8 bg-gradient-to-r from-green-600 via-red-500 to-orange-400 inline-block text-transparent bg-clip-text">
 						{thisYear.title.toUpperCase()}
 					</span>
 					{thisYear.value !== 2023 && <AudioPlayer year={thisYear} />}

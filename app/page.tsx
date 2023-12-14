@@ -13,11 +13,11 @@ const Home = async () => {
 							HYVÄÄ JOULUA 2023!
 						</span>
 						<span className="italic text-lg">toivottaa Joona, Juha & Nooa</span>
-						<hr className="mt-4" />
+						<hr className="mb-2" />
 						<HomePageLink />
-						<hr className="mt-4" />
-						<div className="flex flex-col gap-2 mt-4">
-							<div className="text-lg mb-8">
+						<hr className="mt-2 mb-2" />
+						<div className="flex flex-col gap-4">
+							<div className="text-lg">
 								Löydät vuoden 2023 joulutervehdyksen sekä kaikki aikaisempien
 								vuosien biisit tältä sivustolta!
 							</div>

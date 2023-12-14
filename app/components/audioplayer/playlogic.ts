@@ -10,6 +10,8 @@ export function CreateAudioPlayer(url: string) {
 	audioElement.src = url;
 	audioElement.load();
 
+	let currentVolume = 0.8;
+
 	function togglePlayPause() {
 		if (audioElement.paused) {
 			audioElement.play();
@@ -38,6 +40,24 @@ export function CreateAudioPlayer(url: string) {
 		audioElement.currentTime = time;
 	}
 
+	function increaseVolume() {
+		if (currentVolume < 1) {
+			currentVolume += 0.1;
+			audioElement.volume = currentVolume;
+		}
+	}
+
+	function decreaseVolume() {
+		if (currentVolume > 0) {
+			currentVolume -= 0.1;
+			audioElement.volume = currentVolume;
+		}
+	}
+
+	function getVolume() {
+		return Math.round(currentVolume * 100);
+	}
+
 	return {
 		togglePlayPause,
 		getCurrentTime,
@@ -45,5 +65,8 @@ export function CreateAudioPlayer(url: string) {
 		addTimeUpdateListener,
 		seekTo,
 		isPlaying,
+		increaseVolume,
+		decreaseVolume,
+		getVolume,
 	};
 }

@@ -41,9 +41,15 @@ const Footer = () => {
 				className="flex flex-row group cursor-pointer items-center align-center gap-2"
 			>
 				<AiOutlineDropbox size={16} />
-				<span className="text-neutral-500 group-hover:underline">
-					Biisit Dropboxissa
-				</span>
+				<span className="group-hover:underline">Biisit Dropboxissa</span>
+			</div>
+			<div
+				className="text-neutral-500 hover:underline cursor-pointer"
+				onClick={() => {
+					window.open("mailto:joona.kettunen21@gmail.com");
+				}}
+			>
+				joona.kettunen21@gmail.com
 			</div>
 			<div className="flex flex-row items-center align-center gap-2">
 				<AiOutlineCopyright size={16} />
