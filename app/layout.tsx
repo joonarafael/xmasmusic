@@ -29,6 +29,20 @@ export default async function RootLayout({
 				</ClientOnly>
 				<div className="pb-20 pt-28">{children}</div>
 				<Footer />
+				<script
+					async
+					src="https://www.googletagmanager.com/gtag/js?id=G-770LHRKN31"
+				></script>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-770LHRKN31');
+            `,
+					}}
+				></script>
 			</body>
 		</html>
 	);
