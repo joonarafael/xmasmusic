@@ -1,6 +1,10 @@
 "use client";
 
-import { AiOutlineCopyright, AiOutlineDropbox } from "react-icons/ai";
+import {
+	AiOutlineCopyright,
+	AiOutlineDropbox,
+	AiOutlineInfoCircle,
+} from "react-icons/ai";
 
 const Footer = () => {
 	const today = new Date();
@@ -42,6 +46,13 @@ const Footer = () => {
 			>
 				<AiOutlineDropbox size={16} />
 				<span className="group-hover:underline">Biisit Dropboxissa</span>
+			</div>
+			<div className="flex flex-row items-center align-center gap-2">
+				<AiOutlineInfoCircle size={16} />
+				<span className="text-neutral-500">
+					Sivuston käytöstä kerätään anonyymia dataa paremman käyttökokemuksen
+					luomiseksi.
+				</span>
 			</div>
 			<div
 				className="text-neutral-500 hover:underline cursor-pointer"

@@ -110,6 +110,12 @@ const Controls: React.FC<ControlsProps> = ({
 					)}
 				</div>
 			</BrowserView>
+			<MobileView>
+				<div className="flex flex-row gap-4 p-4 justify-center items-center text-center text-neutral-500">
+					Mobiililaitteella voit säätää äänenvoimakkuutta laitteen omilla
+					painikkeilla.
+				</div>
+			</MobileView>
 		</div>
 	);
 };

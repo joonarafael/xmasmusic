@@ -17,21 +17,21 @@ const ErrorNote = () => {
 			<div className="w-full bg-white z-1 shadow-sm">
 				<div
 					className="
-                    border
-					rounded
-                    py-4
-                "
+						border
+						rounded
+						py-4
+					"
 				>
 					<Container>
 						<div
 							className="
-                            flex
-                            flex-row
-                            items-center
-                            justify-between
-                            gap-4
-							p-2
-                        "
+								flex
+								flex-row
+								items-center
+								justify-between
+								gap-4
+								p-2
+							"
 						>
 							<div>
 								<span className="text-lg">
