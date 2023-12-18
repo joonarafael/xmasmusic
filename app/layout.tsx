@@ -23,6 +23,7 @@ export default async function RootLayout({
 }) {
 	return (
 		<html lang="en">
+			<link rel="icon" href="../public/favicon.ico" />
 			<body className={font.className}>
 				<ClientOnly>
 					<Navbar />
@@ -43,6 +44,7 @@ export default async function RootLayout({
             `,
 					}}
 				></script>
+				<link rel="icon" href="../public/favicon.ico?" type="image/x-icon" />
 			</body>
 		</html>
 	);
