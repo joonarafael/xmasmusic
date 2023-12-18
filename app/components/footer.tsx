@@ -35,29 +35,17 @@ const Footer = () => {
 			>
 				XMAS MUSIC
 			</div>
-			<div
-				onClick={() =>
-					window.open(
-						`https://www.dropbox.com/scl/fo/4yicw3yv196vlbvyf43hy/h?rlkey=tnre6ajdl4ydrd3jmozymwdly`,
-						"_blank"
-					)
-				}
+			<a
+				href="https://www.dropbox.com/scl/fo/4yicw3yv196vlbvyf43hy/h?rlkey=tnre6ajdl4ydrd3jmozymwdly"
+				target="_blank"
 				className="flex flex-row group cursor-pointer items-center gap-2"
 			>
-				<AiOutlineDropbox size={16} />
 				<span className="group-hover:underline">Biisit Dropboxissa</span>
-			</div>
+				<AiOutlineDropbox size={16} />
+			</a>
 			<div className="flex flex-row items-center gap-2 text-neutral-500">
 				Sivuston käytöstä kerätään anonyymia dataa käyttökokemuksen
 				parantamiseksi.
-			</div>
-			<div
-				className="text-neutral-500 hover:underline cursor-pointer"
-				onClick={() => {
-					window.open("mailto:joona.kettunen21@gmail.com");
-				}}
-			>
-				joona.kettunen21@gmail.com
 			</div>
 			<div className="flex flex-row items-center gap-2">
 				<AiOutlineCopyright size={16} />
