@@ -42,17 +42,14 @@ const Footer = () => {
 						"_blank"
 					)
 				}
-				className="flex flex-row group cursor-pointer items-center align-center gap-2"
+				className="flex flex-row group cursor-pointer items-center gap-2"
 			>
 				<AiOutlineDropbox size={16} />
 				<span className="group-hover:underline">Biisit Dropboxissa</span>
 			</div>
-			<div className="flex flex-row items-center align-center gap-2">
-				<AiOutlineInfoCircle size={16} />
-				<span className="text-neutral-500">
-					Sivuston käytöstä kerätään anonyymia dataa paremman käyttökokemuksen
-					luomiseksi.
-				</span>
+			<div className="flex flex-row items-center gap-2 text-neutral-500">
+				Sivuston käytöstä kerätään anonyymia dataa käyttökokemuksen
+				parantamiseksi.
 			</div>
 			<div
 				className="text-neutral-500 hover:underline cursor-pointer"
@@ -62,7 +59,7 @@ const Footer = () => {
 			>
 				joona.kettunen21@gmail.com
 			</div>
-			<div className="flex flex-row items-center align-center gap-2">
+			<div className="flex flex-row items-center gap-2">
 				<AiOutlineCopyright size={16} />
 				{today.getFullYear() === 2023 ? (
 					<span className="text-neutral-500">{`2023 Joona Kettunen`}</span>

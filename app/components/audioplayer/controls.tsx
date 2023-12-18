@@ -85,7 +85,7 @@ const Controls: React.FC<ControlsProps> = ({
 				</button>
 			</div>
 			<BrowserView>
-				<div className="flex flex-row gap-4 p-4 justify-center items-center">
+				<div className="flex flex-row p-4 justify-center items-center">
 					{volume < 1 ? (
 						<CiSquareMinus size={28} color="#e6e6e6" />
 					) : (
@@ -93,7 +93,7 @@ const Controls: React.FC<ControlsProps> = ({
 							<CiSquareMinus size={28} color="#0d0d0d" />
 						</button>
 					)}
-					<div className="flex flex-row gap-2 justify-center items-center w-[7vh]">
+					<div className="flex flex-row gap-2 justify-center items-center w-[12vh]">
 						{volume < 1 ? (
 							<CiVolumeMute size={28} color="#0d0d0d" />
 						) : (
