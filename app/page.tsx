@@ -21,6 +21,7 @@ const Home = async () => {
 								Löydät vuoden 2023 joulutervehdyksen sekä kaikki aikaisempien
 								vuosien biisit tältä sivustolta!
 							</div>
+							<hr />
 							<div className="italic">
 								Eikö selaimesi tue sivustoon sisäänrakennettua audiosoitinta?
 							</div>
