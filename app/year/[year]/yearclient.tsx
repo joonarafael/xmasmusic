@@ -86,11 +86,7 @@ const YearClient: React.FC<YearClientProps> = ({ year }) => {
 					<span className="text-4xl font-extrabold mb-8 bg-gradient-to-r from-green-600 via-red-500 to-orange-400 inline-block text-transparent bg-clip-text">
 						{thisYear.title.toUpperCase()}
 					</span>
-					{thisYear.value === 2023 ? (
-						<div>Joulun 23 biisiä ei ole vielä julkaistu.</div>
-					) : (
-						<AudioPlayer year={thisYear} />
-					)}
+					<AudioPlayer year={thisYear} />
 					<hr className="mt-4" />
 					{width > breakpoint ? (
 						<div className="flex flex-row gap-4 mt-4">
