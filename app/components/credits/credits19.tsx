@@ -1,6 +1,6 @@
 "use client";
 
-import { FaLink } from 'react-icons/fa';
+import { FaLink } from "react-icons/fa";
 
 interface Credits19Props {
 	url: string;
@@ -29,7 +29,9 @@ const Credits19: React.FC<Credits19Props> = ({ url }) => {
 						</span>
 						<span className="mt-3 text-neutral-700">Piano & koskettimet</span>
 						<span className="text-neutral-500">Joona Kettunen</span>
-						<span className="mt-3 text-neutral-700">Kitara & Basso</span>
+						<span className="mt-3 text-neutral-700">
+							Kitara, basso & rummut
+						</span>
 						<span className="text-neutral-500">Juha Kettunen</span>
 						<span className="mt-3 text-neutral-700">Miksaus & masterointi</span>
 						<span className="text-neutral-500">Juha Kettunen</span>
