@@ -26,7 +26,7 @@ const Credits20: React.FC<Credits20Props> = ({ url }) => {
 						<span className="mt-3 text-neutral-700">Taustalaulu</span>
 						<span className="text-neutral-500">Joona Kettunen</span>
 						<span className="mt-3 text-neutral-700">
-							Piano, koskettimet & rummut
+							Piano, koskettimet, basso (syna) & rummut
 						</span>
 						<span className="text-neutral-500">Joona Kettunen</span>
 						<span className="mt-3 text-neutral-700">Kitara</span>
