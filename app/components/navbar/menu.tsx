@@ -1,12 +1,11 @@
 "use client";
 
-import { useRouter } from 'next/navigation';
-import { useCallback, useState } from 'react';
-import { toast } from 'react-hot-toast';
-import { AiOutlineMenu } from 'react-icons/ai';
+import { useRouter } from "next/navigation";
+import { useCallback, useState } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
 
-import MenuItem from './menuitem';
-import MenuLogo from './menulogo';
+import MenuItem from "./menuitem";
+import MenuLogo from "./menulogo";
 
 const Menu = () => {
 	const router = useRouter();
