@@ -32,7 +32,11 @@ const EmptyState: React.FC<EmptyStateProps> = ({
 			<Heading center title={title} subtitle={subtitle} />
 			<div className="w-48 mt-4">
 				{showReset && (
-					<Button outline label="Index" onClick={() => router.push("/")} />
+					<Button
+						outline
+						label="Takaisin etusivulle"
+						onClick={() => router.push("/")}
+					/>
 				)}
 			</div>
 		</div>

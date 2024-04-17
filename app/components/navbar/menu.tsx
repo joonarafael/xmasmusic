@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 
@@ -8,8 +7,6 @@ import MenuItem from "./menuitem";
 import MenuLogo from "./menulogo";
 
 const Menu = () => {
-	const router = useRouter();
-
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleOpen = useCallback(() => {
@@ -21,7 +18,7 @@ const Menu = () => {
 			<div className="flex flex-row items-center gap-3">
 				<div
 					onClick={() => {
-						window.location.href = "/year/2023";
+						window.location.href = "/years/2024";
 					}}
 					className="
 						cursor-pointer
@@ -36,7 +33,7 @@ const Menu = () => {
 						transition
 					"
 				>
-					2023
+					2024
 				</div>
 				<div
 					onClick={toggleOpen}
@@ -62,15 +59,15 @@ const Menu = () => {
 					</div>
 				</div>
 			</div>
-
 			{isOpen && (
 				<div
 					className="
                         absolute
-                        bg-white
+                        bg-slate-50
                         md:w-3/4
                         overflow-hidden
                         right-0
+						border-[1px]
                         rounded-xl
                         shadow-md
                         text-sm
@@ -82,32 +79,18 @@ const Menu = () => {
 						<>
 							<MenuItem
 								onClick={() => {
-									window.location.href = "/year/2019";
+									window.location.href = "/years";
 								}}
-								label="2019"
+								label="Biisit"
 							/>
 							<MenuItem
-								onClick={() => {
-									window.location.href = "/year/2020";
-								}}
-								label="2020"
-							/>
-							<MenuItem
-								onClick={() => {
-									window.location.href = "/year/2021";
-								}}
-								label="2021"
-							/>
-							<MenuItem
-								onClick={() => {
-									window.location.href = "/year/2022";
-								}}
-								label="2022"
+								onClick={() => (window.location.href = "/about")}
+								label="About"
 							/>
 							<hr />
 							<MenuItem
-								onClick={() => (window.location.href = "/year/2023")}
-								label="2023"
+								onClick={() => (window.location.href = "/years/2024")}
+								label="2024"
 							/>
 						</>
 					</div>

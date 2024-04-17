@@ -6,16 +6,19 @@ import Menu from "./menu";
 
 const Navbar = () => {
 	return (
-		<div className="fixed w-full bg-white z-10 shadow-sm">
-			<div
-				className="
-                    border-b-[1px]
+		<div className="fixed w-full z-10 group">
+			<div className="relative">
+				<div className="absolute opacity-75 -inset-0.5 bg-gradient-to-r from-violet-500 to-red-500 rounded-xl blur-xl group-hover:opacity-100 group-hover:blur-2xl transition group-hover:duration-200 duration-1000"></div>
+				<div
+					className="
+					relative
                     py-4
+					bg-slate-50
                 "
-			>
-				<Container>
-					<div
-						className="
+				>
+					<Container>
+						<div
+							className="
                             flex
                             flex-row
                             gap-3
@@ -23,11 +26,12 @@ const Navbar = () => {
                             justify-between
                             md:gap-0
                         "
-					>
-						<Logo />
-						<Menu />
-					</div>
-				</Container>
+						>
+							<Logo />
+							<Menu />
+						</div>
+					</Container>
+				</div>
 			</div>
 		</div>
 	);

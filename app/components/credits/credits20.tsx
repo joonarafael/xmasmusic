@@ -9,7 +9,7 @@ interface Credits20Props {
 const Credits20: React.FC<Credits20Props> = ({ url }) => {
 	return (
 		<div className="flex flex-col gap-4">
-			<div className="text-left p-4 border border-[#FE6244] rounded shadow-lg">
+			<div className="text-left p-4 border border-[#FE6244] rounded shadow-lg bg-slate-50">
 				<span className="text-bold text-lg">TIEDOT</span>
 				<div className="flex flex-row gap-4">
 					<div className="w-1/2 flex flex-col gap-1">
@@ -36,7 +36,7 @@ const Credits20: React.FC<Credits20Props> = ({ url }) => {
 					</div>
 				</div>
 			</div>
-			<div className="flex flex-col gap-2 text-left p-4 border border-[#FC2947] rounded shadow-lg">
+			<div className="flex flex-col gap-2 text-left p-4 border border-[#FC2947] rounded shadow-lg bg-slate-50">
 				<span className="text-bold text-lg">EIKÖ SOITIN TOIMI?</span>
 				<div
 					onClick={() => window.open(`${url}`, "_blank")}

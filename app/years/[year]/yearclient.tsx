@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 import AudioPlayer from "@/app/components/audioplayer/audioplayer";
+import Button from "@/app/components/button";
 import Container from "@/app/components/container";
 import Credits19 from "@/app/components/credits/credits19";
 import Credits20 from "@/app/components/credits/credits20";
@@ -57,6 +59,8 @@ const YearClient: React.FC<YearClientProps> = ({ year }) => {
 		} else if (year === "2023") {
 			return <Lyrics23 />;
 		}
+
+		return "";
 	};
 
 	const creditsObject = (songUrl: string) => {
@@ -71,37 +75,69 @@ const YearClient: React.FC<YearClientProps> = ({ year }) => {
 		} else if (year === "2023") {
 			return <Credits23 url={songUrl} />;
 		}
+
+		return "";
 	};
 
 	return (
-		<Container>
-			{/*
-			<div className="mb-6">
-				<ErrorNote />
-			</div>
-			*/}
-			<div className="max-w-screen-lg mx-auto">
-				<div className="justify-center text-center flex flex-col gap-4">
-					<span className="text-xl">{year}</span>
-					<span className="text-4xl font-extrabold mb-8 bg-gradient-to-r from-green-600 via-red-500 to-orange-400 inline-block text-transparent bg-clip-text">
-						{thisYear.title.toUpperCase()}
-					</span>
-					<AudioPlayer year={thisYear} />
-					<hr className="mt-4" />
+		<div>
+			<div className="w-full pb-8">
+				<div
+					className="max-w-[2520px]
+						md:px-10
+						mx-auto
+						px-4
+						sm:px-2
+						xl:px-20"
+				>
 					{width > breakpoint ? (
-						<div className="flex flex-row gap-4 mt-4">
-							<div className="w-2/5">{lyricsObject()}</div>
-							<div className="w-3/5">{creditsObject(thisYear.songUrl)}</div>
+						<div className="max-w-[220px]">
+							<Button
+								icon={FaArrowLeftLong}
+								label="BIISILISTAAN"
+								onClick={() => (window.location.href = `/years`)}
+							/>
 						</div>
 					) : (
-						<div className="flex flex-col gap-4 mt-4">
-							<div>{lyricsObject()}</div>
-							<div>{creditsObject(thisYear.songUrl)}</div>
+						<div className="w-full">
+							<Button
+								icon={FaArrowLeftLong}
+								label="BIISILISTAAN"
+								onClick={() => (window.location.href = `/years`)}
+							/>
 						</div>
 					)}
 				</div>
 			</div>
-		</Container>
+			<Container>
+				<div className="max-w-screen-lg mx-auto">
+					<div className="justify-center text-center flex flex-col gap-4">
+						<span className="text-2xl">{year}</span>
+						<span className="text-5xl font-extrabold mb-8 bg-gradient-to-r from-green-600 via-red-500 to-orange-400 inline-block text-transparent bg-clip-text">
+							{thisYear.title.toUpperCase()}
+						</span>
+						{year !== "2024" && (
+							<>
+								<AudioPlayer year={thisYear} />
+								{width > breakpoint ? (
+									<div className="flex flex-row gap-4 mt-4 border-t-2 pt-8">
+										<div className="w-2/5">{lyricsObject()}</div>
+										<div className="w-3/5">
+											{creditsObject(thisYear.songUrl)}
+										</div>
+									</div>
+								) : (
+									<div className="flex flex-col gap-4 mt-4">
+										<div>{lyricsObject()}</div>
+										<div>{creditsObject(thisYear.songUrl)}</div>
+									</div>
+								)}
+							</>
+						)}
+					</div>
+				</div>
+			</Container>
+		</div>
 	);
 };
 

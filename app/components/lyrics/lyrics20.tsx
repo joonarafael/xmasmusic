@@ -2,7 +2,7 @@
 
 const Lyrics20 = () => {
 	return (
-		<div className="flex flex-col gap-2 text-left p-4 border border-[#7149C6] rounded shadow-lg">
+		<div className="flex flex-col gap-2 text-left p-4 border border-[#7149C6] rounded shadow-lg bg-slate-50">
 			<span className="font-extrabold text-lg">SANAT</span>
 			<span className="mt-3 text-lg text-neutral-500">Säe 1</span>
 			<span className="text-lg">

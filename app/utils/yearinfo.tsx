@@ -26,4 +26,9 @@ export const years = [
 		title: "Tonttu",
 		url: "https://dl.dropboxusercontent.com/scl/fi/7oyddgj0ktqt2rjmjeame/2023_loudness_adjusted.mp3?rlkey=h3vd8w0e31p8hp9vhuzwo5a2n",
 	},
+	{
+		value: 2024,
+		title: "TBA",
+		url: "",
+	},
 ];

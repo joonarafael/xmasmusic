@@ -25,11 +25,13 @@ export default async function RootLayout({
 		<html lang="en">
 			<link rel="icon" href="../public/favicon.ico" />
 			<body className={font.className}>
-				<ClientOnly>
-					<Navbar />
-				</ClientOnly>
-				<div className="pb-20 pt-28">{children}</div>
-				<Footer />
+				<main className="min-h-screen w-full bg-gradient-to-br from-slate-50 via-violet-50 to-red-200/75">
+					<ClientOnly>
+						<Navbar />
+					</ClientOnly>
+					<div className="pb-20 pt-32">{children}</div>
+					<Footer />
+				</main>
 				<script
 					async
 					src="https://www.googletagmanager.com/gtag/js?id=G-770LHRKN31"
