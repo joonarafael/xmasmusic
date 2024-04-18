@@ -1,6 +1,6 @@
 "use client";
 
-import { IconType } from "react-icons";
+import { IconType } from 'react-icons';
 
 interface ButtonProps {
 	disabled?: boolean;
@@ -30,7 +30,7 @@ const Button: React.FC<ButtonProps> = ({
                 ${small ? "font-light" : "font-semibold"}
                 ${small ? "py-1" : "py-3"}
                 ${small ? "text-sm" : "text-md"}
-                ${outline ? "text-black" : "text-red-700"}
+                ${outline ? "text-black" : "text-zinc-700"}
                 disable:opacity-70
                 disabled:cursor-not-allowed
                 hover:opacity-80

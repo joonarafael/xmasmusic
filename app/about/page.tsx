@@ -12,23 +12,23 @@ const AboutPage = async () => {
 							ABOUT
 						</h1>
 						<div className="flex flex-col bg-slate-50 rounded-xl p-4 drop-shadow-lg">
-							<p className="text-lg border-b pb-4 text-neutral-500 font-light">
-								Sivustoa oon viimeksi päivitetty 17. huhtikuuta 2024.
-							</p>
-							<p className="text-lg pt-4 text-neutral-500 font-light">
-								Sivuston käytöstä kerätään anonyymia dataa ja metriikkaa Google
-								Analyticsin avulla.
-							</p>
-							<p className="text-lg pb-4 border-b text-neutral-500 ">
-								Mitään muita evästeitä ei ole käytössä.
-							</p>
-							<p className="text-lg pt-4">
+							<p className="text-lg">
 								Tälle sivustolle on kerätty kaikki meidän julkaisemamme
 								joulutervehdykset.
 							</p>
 							<p className="text-lg">
 								Yksi joulubiisi on julkaistu jokaisena jouluna vuodesta 2019
 								lähtien.
+							</p>
+							<p className="text-lg py-4 text-neutral-500">
+								<em>Joona, Juha & Nooa</em>
+							</p>
+							<p className="text-lg border-y py-4 text-neutral-500 font-light">
+								Sivustoa on päivitetty viimeksi 18. huhtikuuta 2024.
+							</p>
+							<p className="text-lg pt-4 text-neutral-500">
+								Sivuston käytöstä kerätään <strong>anonyymia</strong> dataa ja
+								metriikkaa Google Analyticsin avulla.
 							</p>
 						</div>
 						<h1 className="text-2xl font-extrabold bg-gradient-to-r from-green-600  to-blue-400 inline-block text-transparent bg-clip-text">

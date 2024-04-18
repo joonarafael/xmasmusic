@@ -81,11 +81,11 @@ const Menu = () => {
 								onClick={() => {
 									window.location.href = "/years";
 								}}
-								label="Biisit"
+								label="BIISIT"
 							/>
 							<MenuItem
 								onClick={() => (window.location.href = "/about")}
-								label="About"
+								label="ABOUT"
 							/>
 							<hr />
 							<MenuItem

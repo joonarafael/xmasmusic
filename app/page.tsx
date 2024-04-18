@@ -1,6 +1,6 @@
-import ClientOnly from "./components/clientonly";
-import Container from "./components/container";
-import HomePageLink from "./components/homepagelink";
+import ClientOnly from './components/clientonly';
+import Container from './components/container';
+import HomePageLink from './components/homepagelink';
 
 const Home = async () => {
 	return (
@@ -12,9 +12,9 @@ const Home = async () => {
 						<span className="text-4xl font-extrabold bg-gradient-to-r from-purple-600 via-pink-500 to-blue-400 inline-block text-transparent bg-clip-text">
 							HYVÄÄ JOULUA 2024!
 						</span>
-						<span className="italic text-lg">toivottaa Joona, Juha & Nooa</span>
+						<span className="italic text-lg pb-4">toivottaa Joona, Juha & Nooa</span>
 						<HomePageLink />
-						<div className="flex flex-col gap-4">
+						<div className="flex flex-col gap-4 pt-4">
 							<div className="text-lg">
 								Löydät vuoden 2024 joulutervehdyksen sekä kaikki aikaisempien
 								vuosien biisit tältä sivustolta!

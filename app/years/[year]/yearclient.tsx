@@ -91,7 +91,7 @@ const YearClient: React.FC<YearClientProps> = ({ year }) => {
 						xl:px-20"
 				>
 					{width > breakpoint ? (
-						<div className="max-w-[220px]">
+						<div className="absolute w-[220px]">
 							<Button
 								icon={FaArrowLeftLong}
 								label="BIISILISTAAN"
@@ -120,7 +120,7 @@ const YearClient: React.FC<YearClientProps> = ({ year }) => {
 							<>
 								<AudioPlayer year={thisYear} />
 								{width > breakpoint ? (
-									<div className="flex flex-row gap-4 mt-4 border-t-2 pt-8">
+									<div className="flex flex-row gap-4 mt-4 border-t pt-8">
 										<div className="w-2/5">{lyricsObject()}</div>
 										<div className="w-3/5">
 											{creditsObject(thisYear.songUrl)}
